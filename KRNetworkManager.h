@@ -14,7 +14,8 @@
 @property (nonatomic, retain) Reachability *hostReach;
 @property (nonatomic) BOOL connectionAvailable;
 
-+ (KRNetworkManager *)sharedKRNetworkManager;
++ (KRNetworkManager *)sharedManager;
+
 - (void)startNetworkMonitor;
 - (void)updateReachability:(Reachability *)curReach;
 
