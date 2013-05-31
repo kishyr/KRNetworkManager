@@ -70,5 +70,19 @@
   }
 }
 
+- (void)setConnectionAvailable:(BOOL)connectionAvailable {
+  _connectionAvailable = connectionAvailable;
+  
+  if (_connectionAvailable && self.connectionIsOnline) {
+    NSLog(@"1 ONLINE");
+    self.connectionIsOnline();
+  }
+  else {
+    NSLog(@"1 OFFLINE");
+    if (self.connectionIsOffline) {
+      self.connectionIsOffline();
+    }
+  }
+}
 
 @end

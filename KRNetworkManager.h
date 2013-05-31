@@ -13,6 +13,8 @@
 
 @property (nonatomic, retain) Reachability *hostReach;
 @property (nonatomic) BOOL connectionAvailable;
+@property (nonatomic, copy) void (^connectionIsOnline)(void);
+@property (nonatomic, copy) void (^connectionIsOffline)(void);
 
 + (KRNetworkManager *)sharedManager;
 
